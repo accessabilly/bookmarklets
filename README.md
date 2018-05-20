@@ -5,12 +5,13 @@ Some bookmarklets for crawling your website's markup.
 
 While working with React and other frameworks, I regularly discovered polluted markup in my developer tools. For example, if you want to handle a component’s CSS class property by its parent component and it passes "null" or other JavaScript Primitives to the component which then somehow renders that as a string. 
 
-### Example
+### JSX Source
 ```jsx
 <div cssClass={myCssClass}"></div>
 ```
-became accidentially
+that accidentially became
 
+### HTML Output
 ```html
 <div class="null"></div>
 ```
