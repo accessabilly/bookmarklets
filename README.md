@@ -9,4 +9,5 @@ Not that this pollution is too harmful. But at the end, it bloats the markup wit
 
 Currently the bookmarklet finds the Javascript Primitives undefined, null and NaN, but you can easily extend the Regex for the findings.
 
-<a href="javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/accessabilly/bookmarklets/master/markup-pollution-checker.js?v='+(Math.random()*1000);var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/accessabilly/bookmarklets/master/markup-pollution-checker.js?v='+(Math.random()*1000);}})();">markup-pollution-checker</a>
+[markup-pollution-checker][1]
+[1]:javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://rawgit.com/accessabilly/bookmarklets/master/markup-pollution-checker.js?v='+(Math.random()*1000);var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++) {iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://rawgit.com/accessabilly/bookmarklets/master/markup-pollution-checker.js?v='+(Math.random()*1000);}})();
