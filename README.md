@@ -3,10 +3,20 @@ Some bookmarklets for crawling your website's markup.
 
 ## Markup Pollution Checker
 
-While working with React and other frameworks, I regularly discovered polluted markup in my developer tools. For example, if you want to handle a component’s CSS class property by its parent component and it passes "null" or other JavaScript Primitives to the component which then somehow renders that as a string. It was very annoying for me to find that stuff in the markup and I came up with the idea to write a little bookmarklet to make findings of "polluted DOM" easier. 
+While working with React and other frameworks, I regularly discovered polluted markup in my developer tools. For example, if you want to handle a component’s CSS class property by its parent component and it passes "null" or other JavaScript Primitives to the component which then somehow renders that as a string. 
 
-Not that this pollution is too harmful. But at the end, it bloats the markup with unnecessary code. And what is really bad, is that you might have mistakes in your JavaScript source code that you can find out that way easier.
+### Example
+```jsx
+<div cssClass={myCssClass}"></div>
+```
+became accidentially
 
-Currently the bookmarklet finds the Javascript Primitives undefined, null and NaN, but you can easily extend the Regex for the findings.
+```html
+<div class="null"></div>
+```
+
+Not that this pollution is too harmful. But you might have mistakes in your JavaScript source code that you can find easier that way.
+
+Currently the bookmarklet finds the Javascript Primitives *undefined, null and NaN* but you can easily extend the Regex for the findings.
 
 [Markup Pollution Checker](https://accessabilly.com/bookmarklet-markup-pollution-checker)
