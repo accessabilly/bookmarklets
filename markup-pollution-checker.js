@@ -7,13 +7,7 @@
   // create containing element
   const listContainer = document.createElement('div');
   listContainer.id = 'markupPollutionChecker';
-  listContainer.setAttribute('aria-live', 'polite');
   document.getElementsByTagName('body')[0].appendChild(listContainer);
-
-  const loading = document.createElement('p');
-  const loadingText = document.createTextNode('Loading markup and checking for pollution\u2026');
-  loading.appendChild(loadingText);
-  listContainer.appendChild(loading);
 
   // get the DOM
   const html = document.documentElement.outerHTML;
@@ -70,8 +64,9 @@
             font-family: 'Trebuchet MS', Helvetica, sans-serif;
             font-size: 1rem;
             line-height: 1.3;
-            position: absolute;
-            top: 3rem;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
             left: 0;
             right: 0;
             width: 80vw;
