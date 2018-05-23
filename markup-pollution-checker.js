@@ -31,9 +31,13 @@
   };
 
   if (numberOfListItems > 0) {
-    // create ordered list
+    // create ordered list & container
+    const listBox = document.createElement('div');
+    listBox.setAttribute('class', 'listbox');
+    listContainer.appendChild(listBox);
+
     const listElement = document.createElement('ol');
-    listContainer.appendChild(listElement);
+    listBox.appendChild(listElement);
 
     // transform array to list of HTML encoded machtes
     for (let i = 0; i < numberOfListItems; i += 1) {
@@ -82,6 +86,10 @@
             font-size: 1.5rem;
             line-height: 1.3;
             margin: 0 0 1rem 0;
+          }
+          #markupPollutionChecker .listbox {
+            max-height: 90vh;
+            overflow-y: auto;
           }
           #markupPollutionChecker ol {
             padding-top: 0.5rem;
